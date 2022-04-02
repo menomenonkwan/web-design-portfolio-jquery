@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrannonLee Design</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 
+npm run build-css
+npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch 
+-->
+  <!-- HEADER  -->
+  <header>
+    <div class="brand">
+      <h3 class="text-lg text-red-500">BrannonLee Design</h3>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- LANDING PAGE -->
+  <section id="home">
+    <div class="wrapper">
+      <h1>Hello</h1>
+      <p>Web Designer UX/UI Brannon Lee etc.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS PAGE  -->
+  <section id="projects">
+    <div class="wrapper">
+      <h2>Projects</h2>
+      <h1 id="draggable">drag me</h1>
+    </div>
+  </section>
+
+  <!-- ABOUT PAGE  -->
+  <section id="about">
+    <div class="wrapper">
+      <h2>About Me</h2>
+    </div>
+  </section>
+  
+  <!-- CONTACT PAGE  -->
+  <section id="contact">
+    <div class="wrapper">
+      <h2>Contact</h2>
+    </div>
+  </section>
+  
+  <script src="scripts/script.js"></script>
+</body>
+</html>
