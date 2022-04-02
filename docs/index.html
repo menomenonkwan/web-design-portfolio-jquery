@@ -9,25 +9,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="font-body overflow-x-hidden">
   <!-- 
 npm run build-css
 npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch 
 -->
+
+  <div class="cursor inline-block w-5 h-5 bg-amber-700 rounded-full fixed mix-blend-difference transition duration-1000 ease-out pointer-events-none scale-150"></div>
+
   <!-- HEADER  -->
-  <header>
-    <div class="brand">
-      <h3 class="text-lg text-red-500">BrannonLee Design</h3>
+  <header class="fixed flex flex-col items-center w-full p-4 z-50 transition ease-out duration-1000">
+    <div class="font-display">
+      <h3 class="text-white text-3xl text-shadow">
+        <a href="#home">BrannonLee Design</a>
+      </h3>
     </div>
     <nav>
-      <ul>
-        <li>
+      <ul class="flex text-white justify-between font-thin p-4 tracking-wider">
+        <li class="px-4">
           <a href="#projects">Projects</a>
         </li>
-        <li>
+        <li class="px-4">
           <a href="#about">About Me</a>
         </li>
-        <li>
+        <li class="px-4">
           <a href="#contact">Contact</a>
         </li>
       </ul>
@@ -35,15 +40,18 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
   </header>
 
   <!-- LANDING PAGE -->
-  <section id="home">
-    <div class="wrapper">
-      <h1>Hello</h1>
-      <p>Web Designer UX/UI Brannon Lee etc.</p>
+  <section id="home" class="">
+    <div class="relative min-h-screen w-full flex items-center justify-center">
+      <img src="images/background_image.jpg" class="parallax absolute w-full h-full object-cover -z-10 grayscale brightness-50" />
+      <div class="text-white flex flex-col justify-center items-center">
+        <h1 class="text-9xl font-bold uppercase text-shadow">Hello.</h1>
+        <p class="text-2xl">UI/UX Web Designer Extraordinaire</p>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS PAGE  -->
-  <section id="projects">
+  <section id="projects" class="bg-red-200">
     <div class="wrapper">
       <h2>Projects</h2>
       <h1 id="draggable">drag me</h1>

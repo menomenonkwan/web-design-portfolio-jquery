@@ -12,7 +12,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        body: ['Nunito']
+        body: ['Montserrat'],
+        display: ['Playfair Display']
       }
     },
   },
