@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body class="font-body overflow-x-hidden">
   <!-- 
@@ -45,13 +47,13 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
       </ul>
     </nav>
   </header>
-  <!-- inset 0 2px 4px 0 rgb(0 0 0 / 0.05) -->
+
   <!-- LANDING PAGE -->
   <section id="home" class="shadow-[inset_0_5px_1000px_2000px_rgba(0,0,0,0.4)]">
     <div class="relative min-h-screen w-full flex items-center justify-center">
       <img src="images/background_image.jpg" class="parallax absolute w-full h-full object-cover -z-10 grayscale brightness-50" />
       <div class="text-white flex flex-col justify-center items-center">
-        <h1 class="text-6xl md:text-9xl font-bold uppercase text-shadow">Hello.</h1>
+        <h1 class="text-7xl md:text-9xl font-bold uppercase text-shadow">Hello.</h1>
         <p class="text-xl md:text-2xl">UI/UX Web Designer Extraordinaire</p>
       </div>
     </div>
@@ -66,10 +68,75 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
   </section>
 
   <!-- ABOUT PAGE  -->
-  <section id="about">
+  <section id="about" class="bg-white">
     <div class="wrapper">
-      <h2>About Me</h2>
-    </div>
+      
+      <h2 class="text-4xl text-center mb-20">What I Can Do For You:</h2>
+      <!-- GRID  -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
+        <div class="about-box">
+          <i class="fab fa-html5 text-red-600"></i>
+          <h4>HTML</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+        <div class="about-box">
+          <i class="fas fa-code text-stone-700"></i>
+          <h4>CODING</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+        <div class="about-box">
+          <i class="fab fa-css3 text-blue-600"></i>
+          <h4>CSS</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+        <div class="about-box">
+          <i class="fab fa-js text-yellow-400"></i>
+          <h4>JAVASCRIPT</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+        <div class="about-box">
+          <i class="fab fa-react text-cyan-400"></i>
+          <h4>REACT</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+        <div class="about-box">
+          <i class="fas fa-ellipsis-h text-purple-500"></i>
+          <h4>AND MORE</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 my-20">
+        <div>
+          <p>I'm doing something</p>
+        </div>
+
+        <!-- accordion -->
+        <div id="accordion" class="md:col-span-2">
+          <h3>Education</h3>
+          <div>
+            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+          </div>
+          <h3>Experience</h3>
+          <div>
+            <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+            <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+          </div>
+        </div> <!-- end accordion -->
+      </div>
+    </div> <!-- end wrapper -->
   </section>
   
   <!-- CONTACT PAGE  -->
@@ -80,5 +147,6 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
   </section>
   
   <script src="scripts/script.js"></script>
+  <script src="scripts/about.js"></script>
 </body>
 </html>

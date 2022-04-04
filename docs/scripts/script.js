@@ -29,14 +29,14 @@ $(document).ready(function() {
   // Hamburger Menu
   $('.hamburger').click(() => {
     $('.hamburger').toggleClass('open');
-    $('nav').slideToggle();
+    $('nav').slideToggle(300, 'swing');
   });
 
   $('nav a').click(() => {
     const screenWidth = $(this).width();
 
     if(screenWidth < 768) {
-      $('nav').slideToggle();
+      $('nav').slideToggle(300, 'swing');
       $('.hamburger').toggleClass('open');
     }
   })
