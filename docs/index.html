@@ -142,14 +142,14 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
   <!-- CONTACT PAGE  -->
   <section id="contact" class="bg-black text-white">
     <div class="wrapper">
-      <h3 class="text-center md:text-left text-5xl font-light mt-4 md:mt-0 mb-6">Contact</h3>
-      <form>
+      <h3 class="text-center text-5xl font-light mt-4 md:mt-0 mb-6">Contact</h3>
+      <form class=" md:max-w-2xl mx-auto">
         <div class="input-box">
           <input
             type="email"
             name="email"
             id="email-field"
-            class="input-field"
+            class="input-field h-14 "
             required
             autofocus
             autocomplete="off"
@@ -161,7 +161,7 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
             type="text"
             name="subject"
             id="subject-field"
-            class="input-field"
+            class="input-field h-14 "
             required
           />
           <label for="subject-field" class="placeholder">Subject</label>
@@ -170,13 +170,14 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
           <textarea
             name="message"
             id="message-field"
-            class="input-field"
+            class="input-field h-48 "
             required
+            
           ></textarea>  
           <label for="message-field" class="placeholder">Message</label>
         </div>
         
-        <button class="submit">Submit</button>
+        <button class="w-full sm:w-auto sm:ml-auto block font-semibold px-7 py-2 bg-sky-300 text-black text-sm rounded border-0 outline-none cursor-pointer transition-all duration-150 hover:brightness-75">Submit</button>
       </form>
     </div>
   </section>
