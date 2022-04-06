@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body class="font-body overflow-x-hidden">
@@ -61,9 +61,18 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
 
   <!-- PROJECTS PAGE  -->
   <section id="projects" class="bg-red-200">
-    <div class="wrapper">
-      <h2>Projects</h2>
-      <h1 id="draggable">drag me</h1>
+    <div class="min-h-screen py-32 bg-blue-400">
+      <h3 class="text-center text-5xl font-light mt-4 md:mt-0 mb-6">Projects</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3">
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+        <div class="h-80 border-2"></div>
+      </div>
     </div>
   </section>
 
@@ -73,7 +82,7 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
       
       <h2 class="text-4xl text-center mb-20">What I Can Do For You:</h2>
       <!-- GRID  -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div class="about-box">
           <i class="fab fa-html5 text-red-600"></i>
           <h4>HTML</h4>
@@ -105,47 +114,76 @@ npx tailwindcss -i ./src/styles.css -o ./docs/styles.css --watch
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quod voluptatum nam illum! Eligendi ex alias voluptate quis tempora quod eum consectetur facilis rerum hic reiciendis, architecto, deleniti, nemo modi!</p>
         </div>
       </div>
-      
-      <div class="grid md:grid-cols-3 my-20">
-        <div>
-          <p>I'm doing something</p>
+    </div>  
+    <div class="bg-slate-500 p-14 text-white grid md:grid-cols-5 px-8 py-32 lg:px-40">
+      <div class="md:col-span-2 h-64 md:h-96 md:w-96 md:mr-20 bio-pic"></div>
+      <div class="md:col-span-3 md:pl-2 md:pr-2">
+        <h3 class="text-center md:text-left text-5xl font-light mt-4 md:mt-0 mb-6">About Me</h3>
+        <div id="tabs" class="">
+          <ul class="tabs flex flex-col md:flex-row justify-center md:justify-start mb-4 font-light">
+            <li><a href="#tabs-1" class="border-l-2">Education</a></li>
+            <li><a href="#tabs-2" class="border-l-2">Experience</a></li>
+            <li><a href="#tabs-3" class="border-l-2">Certifications</a></li>
+          </ul>
+          <div id="tabs-1">
+            <p class="font-light text-lg">Education stuff... Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+          </div>
+          <div id="tabs-2">
+            <p class="font-light text-lg">Exerience and junk... Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+          </div>
+          <div id="tabs-3">
+            <p class="font-light text-lg">All my certifications... Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+          </div>
         </div>
-
-        <!-- accordion -->
-        <div id="accordion" class="md:col-span-2">
-          <h3>Education</h3>
-          <div>
-            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-          </div>
-          <h3>Experience</h3>
-          <div>
-            <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-          </div>
-          <h3>Section 3</h3>
-          <div>
-            <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-            <ul>
-              <li>List item one</li>
-              <li>List item two</li>
-              <li>List item three</li>
-            </ul>
-          </div>
-          <h3>Section 4</h3>
-          <div>
-            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-          </div>
-        </div> <!-- end accordion -->
       </div>
-    </div> <!-- end wrapper -->
-  </section>
-  
-  <!-- CONTACT PAGE  -->
-  <section id="contact">
-    <div class="wrapper">
-      <h2>Contact</h2>
     </div>
   </section>
   
+  <!-- CONTACT PAGE  -->
+  <section id="contact" class="bg-black text-white">
+    <div class="wrapper">
+      <h3 class="text-center md:text-left text-5xl font-light mt-4 md:mt-0 mb-6">Contact</h3>
+      <form>
+        <div class="input-box">
+          <input
+            type="email"
+            name="email"
+            id="email-field"
+            class="input-field"
+            required
+            autofocus
+            autocomplete="off"
+          />
+          <label for="email-field" class="placeholder">Email</label>
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            name="subject"
+            id="subject-field"
+            class="input-field"
+            required
+          />
+          <label for="subject-field" class="placeholder">Subject</label>
+        </div>
+        <div class="input-box">
+          <textarea
+            name="message"
+            id="message-field"
+            class="input-field"
+            required
+          ></textarea>  
+          <label for="message-field" class="placeholder">Message</label>
+        </div>
+        
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="bg-black py-2">
+    <p class="text-white text-center font-extralight">&copy; 2022 Brannon Lee</p>
+  </footer>
   <script src="scripts/script.js"></script>
   <script src="scripts/about.js"></script>
 </body>

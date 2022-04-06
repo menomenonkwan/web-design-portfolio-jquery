@@ -66,6 +66,10 @@ $(document).ready(function() {
     }
   })
 
+  // tabs
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
 
-  $( "#draggable" ).draggable();
+  
 })
