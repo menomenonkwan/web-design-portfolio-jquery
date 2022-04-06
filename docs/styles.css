@@ -494,10 +494,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: -10;
 }
 
-.m-auto{
-  margin: auto;
-}
-
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -517,12 +513,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-20{
   margin-bottom: 5rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .mb-4{
@@ -557,10 +557,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-80{
-  height: 20rem;
-}
-
 .h-64{
   height: 16rem;
 }
@@ -587,6 +583,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10{
   width: 2.5rem;
+}
+
+.max-w-none{
+  max-width: none;
 }
 
 .scale-150{
@@ -639,14 +639,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.25rem;
 }
 
-.border-2{
-  border-width: 2px;
-}
-
-.border{
-  border-width: 1px;
-}
-
 .border-0{
   border-width: 0px;
 }
@@ -665,9 +657,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
-.bg-blue-400{
+.bg-black{
   --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -678,11 +670,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-500{
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-sky-300{
@@ -718,19 +705,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
+.py-32{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .px-7{
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pt-32{
+  padding-top: 8rem;
 }
 
 .text-center{
@@ -792,16 +788,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 300;
 }
 
-.font-extralight{
-  font-weight: 200;
-}
-
 .font-semibold{
   font-weight: 600;
 }
 
-.font-normal{
-  font-weight: 400;
+.font-extralight{
+  font-weight: 200;
 }
 
 .uppercase{
@@ -867,13 +859,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.outline{
-  outline-style: solid;
 }
 
 .brightness-50{
@@ -883,10 +877,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grayscale{
   --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1000,7 +990,7 @@ h1:hover + .cursor {
     left: 0;
     bottom: 0;
     right: 0;
-    background: black;
+    background: darkslategrey;
     display: none;
   }
 
@@ -1025,6 +1015,54 @@ h1:hover + .cursor {
   width: 83.333333%;
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+/* PROJECT SECTION */
+
+.project-item{
+  position: relative;
+  height: 24rem;
+  overflow: hidden;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
+}
+
+.project-front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.project-back{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  --tw-translate-y: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.project-item:hover > .project-front {
+  transform: translateY(-75%);
+  filter: blur(6px);
+}
+
+.project-item:hover > .project-back {
+  transform: translateY(25%);
 }
 
 .about-box{
@@ -1173,39 +1211,11 @@ form .input-box .input-field:focus + .placeholder{
   color: rgb(125 211 252 / var(--tw-text-opacity));
 }
 
-form .input-box .input-field:focus + .placeholder, form .input-box .input-field.has-value + .placeholder{
+form .input-box .input-field:focus + .placeholder, form .input-box .input-field.has-value + .placeholder, form .input-box .text-field:focus + .placeholder, form .input-box .text-field.has-value + .placeholder{
   --tw-translate-y: -2rem;
   --tw-scale-x: .75;
   --tw-scale-y: .75;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.submit {
-  padding: 10px 28px;
-  background-color: #1a73e8;
-  color: #ffffff;
-  font-size: 14px;
-  font-family: "productsans", sans-serif;
-  font-weight: 600;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all 150ms;
-}
-
-.submit:hover {
-  box-shadow: 0 3px 5px #1a73e83b;
-  filter: brightness(0.8);
-}
-
-.sign-in:active {
-  box-shadow: none;
-}
-
-.hover\:brightness-90:hover{
-  --tw-brightness: brightness(.9);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:brightness-75:hover{
@@ -1313,3 +1323,6 @@ form .input-box .input-field:focus + .placeholder, form .input-box .input-field.
     padding-right: 10rem;
   }
 }
+
+
+

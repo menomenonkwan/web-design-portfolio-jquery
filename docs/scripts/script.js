@@ -71,5 +71,26 @@ $(document).ready(function() {
     $( "#tabs" ).tabs();
   } );
 
+  // form
+  $('.submit').click(function(e) {
+    e.preventDefault();
+  });
   
+  $(".input-field").focusout(function () {
+    const inputValue = $(this).val();
+    if (inputValue === "") {
+      $(this).removeClass("has-value");
+    } else {
+      $(this).addClass("has-value");
+    }
+  });
+  
+  $(".text-field").focusout(function () {
+    const inputValue = $(this).val();
+    if (inputValue === "") {
+      $(this).removeClass("has-value");
+    } else {
+      $(this).addClass("has-value");
+    }
+  });
 })
