@@ -9,7 +9,6 @@ html {
 }
 section {
   min-height: 100vh;
-  /* padding: 2rem; */
 }
 h1:hover + .cursor {
   transform: scale(10);
@@ -64,7 +63,7 @@ h1:hover + .cursor {
     left: 0;
     bottom: 0;
     right: 0;
-    background: darkslategrey;
+    background: #261114;
     display: none;
   }
   nav ul {
@@ -86,13 +85,13 @@ h1:hover + .cursor {
 
 /* PROJECT SECTION */
 .project-item {
-  @apply h-96 border border-slate-700 relative overflow-hidden;
+  @apply h-96 relative overflow-hidden;
 }
 .project-front {
   @apply bg-slate-700 h-full w-full absolute translate-y-0 transition-all duration-500;
 }
 .project-back {
-  @apply text-white bg-slate-500 h-full w-full absolute translate-y-full transition-all duration-500;
+  @apply text-white bg-slate-900 p-4 h-full w-full absolute translate-y-full transition-all duration-500;
 }
 .project-item:hover > .project-front {
   transform: translateY(-75%);
@@ -101,7 +100,9 @@ h1:hover + .cursor {
 .project-item:hover > .project-back {
   transform: translateY(25%);
 }
-
+.project-btn {
+  @apply inline-block text-white border-2 bg-slate-700 border-slate-900 py-1 px-4 rounded ml-4 mt-4 hover:border-amber-700 hover:bg-slate-800 transition-all duration-200;
+}
 
 .about-box {
   @apply min-w-full h-auto shadow-md p-4;

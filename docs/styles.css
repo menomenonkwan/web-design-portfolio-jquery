@@ -720,11 +720,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.75rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pt-32{
   padding-top: 8rem;
 }
@@ -912,7 +907,6 @@ html {
 
 section {
   min-height: 100vh;
-  /* padding: 2rem; */
 }
 
 h1:hover + .cursor {
@@ -990,7 +984,7 @@ h1:hover + .cursor {
     left: 0;
     bottom: 0;
     right: 0;
-    background: darkslategrey;
+    background: #261114;
     display: none;
   }
 
@@ -1023,9 +1017,6 @@ h1:hover + .cursor {
   position: relative;
   height: 24rem;
   overflow: hidden;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
 .project-front{
@@ -1048,7 +1039,8 @@ h1:hover + .cursor {
   --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  padding: 1rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: all;
@@ -1063,6 +1055,34 @@ h1:hover + .cursor {
 
 .project-item:hover > .project-back {
   transform: translateY(25%);
+}
+
+.project-btn{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(15 23 42 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.project-btn:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(180 83 9 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .about-box{
